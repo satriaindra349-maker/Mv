@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tolong Maafin Aku Yah? 🥺</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffe6e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+      z-index: 10;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Overlay Pembuka */
+    #startOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(255, 230, 233, 0.98);
+      z-index: 999999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #startBtn {
+      background-color: #ff4d6d;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 13.5px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      min-height: 50px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+      width: 48%;
+      transition: transform 0.2s ease;
+    }
+
+    #noBtn {
+      background-color: #ccc;
+      color: #333;
+      width: 48%;
+      position: relative;
+      z-index: 99;
+      transition: transform 0.15s ease;
+    }
+
+    .link-btn {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+      color: white;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .option-btn {
+      background-color: #ff758f;
+      color: white;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 12px 15px;
+      border-radius: 20px;
+      font-size: 13px;
+      text-align: left;
+      line-height: 1.4;
+      border: none;
+    }
+
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      user-select: none;
+      pointer-events: none;
+      animation: fall linear forwards;
+      z-index: 1;
+    
